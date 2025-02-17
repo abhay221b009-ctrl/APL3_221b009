@@ -1,4 +1,4 @@
-interface Flyable {
+ interface Flyable {
     void fly();
 }
 
@@ -17,9 +17,13 @@ class RubberDuck extends Duck implements Quackable {
         System.out.println("Rubber Duck squeaks.");
     }
 }
-
-class WoodenDuck extends Duck {
+class WoodenDuck extends Duck implements Quackable {
+    public void quack() {
+        System.out.println("Rubber Duck is mute");
+    }
 }
+
+ 
 
 class RedHeadDuck extends Duck implements Flyable, Quackable {
     public void fly() {
@@ -54,6 +58,7 @@ public class DuckGame {
         ld.swim();
 
         ((Quackable) rd).quack();
+        ((Quackable) wd).quack();
         ((Quackable) rhd).quack();
         ((Quackable) ld).quack();
         ((Flyable) rhd).fly();
