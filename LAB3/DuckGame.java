@@ -19,7 +19,7 @@ class RubberDuck extends Duck implements Quackable {
 }
 class WoodenDuck extends Duck implements Quackable {
     public void quack() {
-        System.out.println("Rubber Duck is mute");
+        System.out.println("Wooden Duck is mute");
     }
 }
 
